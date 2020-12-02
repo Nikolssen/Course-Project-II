@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Project" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Project" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-std=c++14" />
+					<Add option="-g" />
+					<Add option="-D__WXDEBUG__" />
+					<Add directory="D:/WxWidgets/lib/gcc_dll/mswud" />
+					<Add directory="include" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="D:/WxWidgets/lib/gcc_dll/mswud" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="libwxmsw31ud_gl.a" />
+					<Add library="libopengl32.a" />
+					<Add library="libglu32.a" />
+					<Add library="libwxmsw31ud.a" />
+					<Add directory="D:/WxWidgets/lib/gcc_dll" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Project" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="D:/WxWidgets/lib/gcc_dll/mswu" />
+					<Add directory="include" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="D:/WxWidgets/lib/gcc_dll/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libwxmsw31u_gl.a" />
+					<Add library="libopengl32.a" />
+					<Add library="libglu32.a" />
+					<Add library="libwxmsw31u.a" />
+					<Add directory="D:/WxWidgets/lib/gcc_dll" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++14" />
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DWXUSINGDLL" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add directory="D:/WxWidgets/include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="D:/WxWidgets/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-mthreads" />
+		</Linker>
+		<Unit filename="include/Application.h" />
+		<Unit filename="include/Canvas2D.h" />
+		<Unit filename="include/Canvas3D.h" />
+		<Unit filename="include/Converter.h" />
+		<Unit filename="include/MainFrame.h" />
+		<Unit filename="include/structures.h" />
+		<Unit filename="include/xpm_icons.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="src/Application.cpp" />
+		<Unit filename="src/Canvas2D.cpp" />
+		<Unit filename="src/Canvas3D.cpp" />
+		<Unit filename="src/Converter.cpp" />
+		<Unit filename="src/MainFrame.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

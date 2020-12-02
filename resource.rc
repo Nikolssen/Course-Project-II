@@ -1,0 +1,4 @@
+aaaa ICON "ChemEditor.ico"
+
+#include "wx/msw/wx.rc"
+
