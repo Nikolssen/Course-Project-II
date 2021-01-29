@@ -16,7 +16,7 @@ Canvas2D::~Canvas2D()
 {
 }
 
-bool Canvas2D::isWithinSafeZone(short int x0, short int y0)
+bool Canvas2D::isWithinSafeZone(int x0, int y0)
 {
     wxSize size = wxWindow::GetClientSize();
     int x = size.GetWidth();
@@ -49,8 +49,8 @@ wxBitmap Canvas2D::getBitmap()
 void Canvas2D::leftClick(wxMouseEvent& event)
 {
     vertex2D current;
-    short int x = event.GetX();
-    short int y = event.GetY();
+    int x = event.GetX();
+    int y = event.GetY();
     if (isWithinSafeZone(x,y))
     {
         switch (counter)
@@ -99,9 +99,9 @@ void Canvas2D::leftClick(wxMouseEvent& event)
             }
             if (flag)
             {
-                short int x1;
-                short int y1;
-                short int exodus;
+                int x1;
+                int y1;
+                int exodus;
                 if (bond == 3 || vertices[i].element.bond == 3|| (bond==2 && vertices[i].element.bond == 2))
                     exodus = 3;
                 else
@@ -241,7 +241,7 @@ char Canvas2D::getPossibleBonds(elem activeElement)
     }
 }
 
-void Canvas2D::getVertexLocation(short int x0,short int y0,short int x,short int y,short int value,short int &x1,short int &y1)
+void Canvas2D::getVertexLocation(int x0, int y0, int x, int y, int value, int &x1, int &y1)
 {
     float alpha, c, s;
     int rx, ry;
@@ -325,7 +325,7 @@ std::string Canvas2D::getStringForVertex(atom activeAtom)
     return vertex;
 }
 
-void Canvas2D::setBond(char bondNumber)
+void Canvas2D::setBond(int bondNumber)
 {
     if (getPossibleBonds(active)>=bondNumber)
         bond = bondNumber;
