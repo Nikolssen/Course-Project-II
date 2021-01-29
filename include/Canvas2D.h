@@ -22,19 +22,19 @@ public:
     void paint(wxPaintEvent &event);
     void leftClick(wxMouseEvent& event);
     void clearVertex();
-    void setBond(char bondNumber);
+    void setBond(int bondNumber);
     void setActiveElement(elem activeElement);
     wxBitmap getBitmap();
     std::vector<vertex2D> vertices;
 private:
     void render(wxDC& dc);
-    void getVertexLocation(short int x0,short int y0,short int x,short int y,short int value,short int &x1,short int &y1);
+    void getVertexLocation(int x0, int y0, int x, int y, int value, int &x1, int &y1);
     std::string getStringForVertex(atom active);
-    bool isWithinSafeZone(short int x0, short int y0);
+    bool isWithinSafeZone(int x0, int y0);
     char getPossibleBonds(elem activeElement);
-    short int counter;
-    const char length = 30;
-    char bond;
+    int counter;
+    const int length = 30;
+    int bond;
     elem active;
 
 };
