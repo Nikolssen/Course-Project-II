@@ -743,7 +743,7 @@ bool Converter::isSimple(std::vector<vertex2D> &vertices2D)
     return false;
 
 }
-char Converter::getPossibleBonds(elem activeElement)
+int Converter::getPossibleBonds(elem activeElement)
 {
     switch (activeElement)
     {
