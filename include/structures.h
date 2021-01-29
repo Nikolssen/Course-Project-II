@@ -11,8 +11,8 @@ enum elem {carbon, nitrogen, phosphorus, oxygen, sulfur, fluorine, chlorine, bro
 typedef struct
 {
     elem atomName;
-    char freebonds;
-    char bond;
+    int freebonds;
+    int bond;
 } atom;
 
 typedef struct
@@ -24,10 +24,10 @@ typedef struct
 
 typedef struct
 {
-    short int x;
-    short int y;
-    short int prevx;
-    short int prevy;
+    int x;
+    int y;
+    int prevx;
+    int prevy;
     bool shortRear;
     bool shortFront;
     atom element;
@@ -54,8 +54,8 @@ typedef struct quaternaryTree
     struct quaternaryTree *fourth;
     struct quaternaryTree *parent;
     vertex3D vertex;
-    short int index;
-    char lastBond;
-    char bond;
+    int index;
+    int lastBond;
+    int bond;
 } node;
 #endif // STRUCTURES_H_INCLUDED
